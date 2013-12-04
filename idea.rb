@@ -38,7 +38,7 @@ class Idea
   end
 
   def self.find(id)
-    raw_idea = find_raw_idead(id)
+    raw_idea = find_raw_idea(id)
     new(raw_idea)
   end
 
