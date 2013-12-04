@@ -17,6 +17,12 @@ class IdeaBoxApp < Sinatra::Base
     erb :index, locals: {ideas: Idea.all}
   end
 
+  get '/:id/edit' do |id|
+    idea = Idea.find(id.to_i)
+    # call up the erb view and send it these local variables to work with
+    erb :edit, locals: {id: id, idea: idea}
+  end
+
   post '/' do
     idea = Idea.new(params['idea_title'], params['idea_description'])
     idea.save
@@ -24,6 +30,8 @@ class IdeaBoxApp < Sinatra::Base
   end
 
   delete '/:id' do |id|
+    Idea.delete(id.to_i)
+    redirect '/'
     "DELETING an idea!"
   end
 end

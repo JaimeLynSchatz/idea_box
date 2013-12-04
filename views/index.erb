@@ -20,6 +20,7 @@
         <li>
           <%= idea.title %><br />
           <%= idea.description %>
+          <a href="/<%= id %>/edit">Edit</a>
           <!-- "This uses some trickery. We want to send the DELETE verb to the server, but HTML forms aren’t particular good with anything other than POST. So we’re sending a POST, and then passing some extra data to the page in a hidden input.
 
           The request will come in to sinatra as a POST, but before sinatra passes it to your application, it will see the _method=DELETE, and instead of looking for a method in your application that matches post '/:id', it will look for delete '/:id'." -- from tutorials.jumpstartlab.com/projects/idea_box -->
