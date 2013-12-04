@@ -23,6 +23,17 @@ class IdeaBoxApp < Sinatra::Base
     erb :edit, locals: {id: id, idea: idea}
   end
 
+  put '/:id' do |id|
+    # update the idea in the database
+    data = {
+      :title => params['idea_title'],
+      :description => params['idea_description']
+    }
+    Idea.update(id.to_i, data)
+    #redirect to the index page
+    redirect '/'
+  end
+
   post '/' do
     idea = Idea.new(params['idea_title'], params['idea_description'])
     idea.save
