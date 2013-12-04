@@ -1,6 +1,10 @@
 require './idea'
 
 class IdeaBoxApp < Sinatra::Base
+  # allows us to override verbs
+  set :method_override, true
+  
+  # replaces 404 file to include useful params for debugging
   not_found do
     erb :error
   end
@@ -19,4 +23,7 @@ class IdeaBoxApp < Sinatra::Base
     redirect '/'
   end
 
+  delete '/:id' do |id|
+    "DELETING an idea!"
+  end
 end
