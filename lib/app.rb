@@ -1,9 +1,8 @@
-require './idea'
-require './idea_store'
+require 'idea_box'
 class IdeaBoxApp < Sinatra::Base
   # allows us to override verbs
   set :method_override, true
-  
+  set :root, 'lib/app'
   # replaces 404 file to include useful params for debugging
   not_found do
     erb :error
