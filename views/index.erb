@@ -4,14 +4,7 @@
   </head>
   <body>
     <h1>IdeaBox</h1>
-    <form action='/' method='POST'>
-      <p>
-        Your Idea:
-      </p>
-      <input type='text' name='idea[title]' /><br />
-      <textarea name='idea[description]'></textarea><br />
-      <input type='submit' />
-    </form>
+    <%= erb :form %>
 
     <h3>Existing Ideas</h3>
 

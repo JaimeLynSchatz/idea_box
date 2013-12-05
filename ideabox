@@ -1,19 +1,23 @@
 ---
 ideas:
-- :title: Master List
-  :description: A lightweight todo list that pulls in items from multiple sources
-    like pdfs, html pages, emails, etc.
-- :title: Bring Coderdojo to LWSD
-  :description: Nuff said
-- :title: Teachers?
-  :description: STEM high school students, friends of John, Mr. Hakes Miller might
+- title: Master List
+  description: A lightweight todo list that pulls in items from multiple sources like
+    pdfs, html pages, emails, etc.
+- title: Bring Coderdojo to LWSD
+  description: Nuff said
+- title: Teachers?
+  description: STEM high school students, friends of John, Mr. Hakes Miller might
     have leads, too, of Mr. Ewert or the teacher for comp sci at STEM or people at
     TBT...
-- :title: Students as Teachers
-  :description: Simplifies things because they won't go through the LWSD volunteer
+- title: Students as Teachers
+  description: Simplifies things because they won't go through the LWSD volunteer
     application process. Other teachers, too? but $$$ can't work for free. Can consult,
     perhaps?
-- title: Robots on planes
-  description: You update the robot yeah, boyeee. Working?
-- :title: Polish Schatz Family Splash Page
-  :description: uh, what she said. Do you work?
+- title: Idea Gone
+  description: Did this idea just completely disappear?
+- title: Polish Schatz Family Splash Page
+  description: uh, what she said. Do you work?
+- title: New Idea
+  description: Will you appear or not? I see you
+- title: Another New Idea
+  description: Just a test, delete soon.
