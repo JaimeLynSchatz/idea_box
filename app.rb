@@ -1,5 +1,5 @@
 require './idea'
-
+require './idea_store'
 class IdeaBoxApp < Sinatra::Base
   # allows us to override verbs
   set :method_override, true
@@ -14,30 +14,29 @@ class IdeaBoxApp < Sinatra::Base
   end
 
   get '/' do
-    erb :index, locals: {ideas: Idea.all, idea: Idea.new}
+    erb :index, locals: {ideas: IdeaStore.all, idea: Idea.new}
   end
 
   get '/:id/edit' do |id|
-    idea = Idea.find(id.to_i)
+    idea = IdeaStore.find(id.to_i)
     # call up the erb view and send it these local variables to work with
     erb :edit, locals: {id: id, idea: idea}
   end
 
   put '/:id' do |id|
     # update the idea in the database
-    Idea.update(id.to_i, params[:idea])
+    IdeaStore.update(id.to_i, params[:idea])
     #redirect to the index page
     redirect '/'
   end
 
   post '/' do
-    idea = Idea.new(params[:idea])
-    idea.save
+    IdeaStore.create(params[:idea])
     redirect '/'
   end
 
   delete '/:id' do |id|
-    Idea.delete(id.to_i)
+    IdeaStore.delete(id.to_i)
     redirect '/'
     "DELETING an idea!"
   end
