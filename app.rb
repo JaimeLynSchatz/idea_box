@@ -25,11 +25,7 @@ class IdeaBoxApp < Sinatra::Base
 
   put '/:id' do |id|
     # update the idea in the database
-    data = {
-      :title => params['idea_title'],
-      :description => params['idea_description']
-    }
-    Idea.update(id.to_i, data)
+    Idea.update(id.to_i, params[:idea])
     #redirect to the index page
     redirect '/'
   end
