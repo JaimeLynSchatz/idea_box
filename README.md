@@ -1,1 +1,1 @@
-A ssmsmsmasmasmalsmalsmallsmallsmall iiidideideaideaidea sststastastasstashstashstashestasherstasherstashed, ppaparpartpart oofof tthththethethe **jjujumjumjumpjumpjumpsjumpstjumpstajumpstarjumpstartjumpstartJumpStart jumpstart llalalablablabslabs** ttututtutotutortutoritutoritutoriatutorialtutorialtutorial.
+A small idea stasher, part of the **JumpStartlabs** tutorial.
