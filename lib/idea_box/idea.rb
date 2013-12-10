@@ -15,7 +15,7 @@ class Idea
   def to_h
     {
       "title" => title,
-      "description" => description
+      "description" => description,
       "rank" => rank
     }
 
