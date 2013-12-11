@@ -19,7 +19,7 @@ class IdeaBoxApp < Sinatra::Base
   get '/:id/edit' do |id|
     idea = IdeaStore.find(id.to_i)
     # call up the erb view and send it these local variables to work with
-    erb :edit, locals: {id: id, idea: idea}
+    erb :edit, locals: {idea: idea}
   end
 
   put '/:id' do |id|
