@@ -1,5 +1,5 @@
 class Idea
-
+  include Comparable
   attr_reader :title, :description, :rank
 
   def initialize(attributes = {})
@@ -18,5 +18,10 @@ class Idea
       "description" => description,
       "rank" => rank
     }
+  end
+
+  def like!
+    @rank += 1
+  end
 
 end
