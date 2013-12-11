@@ -1,11 +1,12 @@
 class Idea
   include Comparable
-  attr_reader :title, :description, :rank
+  attr_reader :title, :description, :rank, :id
 
   def initialize(attributes = {})
     @title = attributes["title"]
     @description = attributes["description"]
     @rank = attributes["rank"] || 0
+    @id = attribute["id"]
   end
 
   def save
@@ -24,4 +25,7 @@ class Idea
     @rank += 1
   end
 
+  def <=>(other)
+    other.rank <=> rank
+  end
 end

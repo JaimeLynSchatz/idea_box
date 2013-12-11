@@ -13,7 +13,7 @@ class IdeaStore
 
   def self.find(id)
       raw_idea = find_raw_idea(id)
-      Idea.new(raw_idea)
+      Idea.new(raw_idea.merge("id" => i))
   end
 
   def self.find_raw_idea(id)
@@ -36,9 +36,11 @@ class IdeaStore
   end
 
   def self.all
-      raw_ideas.map do |data|
-        Idea.new(data)
-      end
+    ideas = []
+    raw_ideas.each_with_index do |data, i|
+      ideas << Idea.new(data.merge("id" => i))
+    end
+    ideas
   end
 
   def self.create(attributes)
