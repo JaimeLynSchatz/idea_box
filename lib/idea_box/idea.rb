@@ -6,7 +6,7 @@ class Idea
     @title = attributes["title"]
     @description = attributes["description"]
     @rank = attributes["rank"] || 0
-    @id = attribute["id"]
+    @id = attributes["id"]
   end
 
   def save
